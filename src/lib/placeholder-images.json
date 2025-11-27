@@ -1,3 +1,148 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bi",
+      "description": "Abstract visualization of business intelligence dashboard",
+      "imageUrl": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3NjQyMDgyMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data visualization"
+    },
+    {
+      "id": "hero-rd",
+      "description": "Close-up of a robotic arm working on a circuit board",
+      "imageUrl": "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb2JvdGljcyUyMGNpcmN1aXR8ZW58MHx8fHwxNzY0MjM5NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robotics circuit"
+    },
+    {
+      "id": "bi-feature-growth",
+      "description": "Growth Dashboard Preview UI mockup",
+      "imageUrl": "https://images.unsplash.com/photo-1759661966728-4a02e3c6ed91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkYXNoYm9hcmQlMjBjaGFydHxlbnwwfHx8fDE3NjQxMzg1ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard chart"
+    },
+    {
+      "id": "bi-feature-sentiment",
+      "description": "Review Sentiment Analysis UI mockup",
+      "imageUrl": "https://images.unsplash.com/photo-1734856080638-71e78b3d8d5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmFseXRpY3MlMjBncmFwaHxlbnwwfHx8fDE3NjQxNzQ1MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "analytics graph"
+    },
+    {
+      "id": "bi-feature-price",
+      "description": "Price Recommendation Engine UI mockup",
+      "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmaW5hbmNpYWwlMjByZXBvcnR8ZW58MHx8fHwxNzY0MjM5NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "financial report"
+    },
+    {
+      "id": "bi-feature-economics",
+      "description": "Unit Economics Calculator UI mockup",
+      "imageUrl": "https://images.unsplash.com/photo-1668930171580-07c624f74cb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2FsY3VsYXRvciUyMGludGVyZmFjZXxlbnwwfHx8fDE3NjQyMzk0MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "calculator interface"
+    },
+    {
+      "id": "bi-feature-simulation",
+      "description": "Launch Simulation UI mockup",
+      "imageUrl": "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzaW11bGF0aW9uJTIwZ3JhcGh8ZW58MHx8fHwxNzY0MjM5NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "simulation graph"
+    },
+    {
+      "id": "bi-feature-analytics",
+      "description": "Existing Product Analytics UI mockup",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9kdWN0JTIwY2hhcnRzfGVufDB8fHx8MTc2NDIzOTQyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "product charts"
+    },
+    {
+      "id": "bi-feature-summary",
+      "description": "Feedback Summarizer UI mockup",
+      "imageUrl": "https://images.unsplash.com/photo-1762330467572-5199bc772a20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZXh0JTIwYW5hbHlzaXN8ZW58MHx8fHwxNzY0MTQ2MjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "text analysis"
+    },
+    {
+      "id": "bi-feature-planner",
+      "description": "Launch Planner UI mockup",
+      "imageUrl": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnYW50dCUyMGNoYXJ0fGVufDB8fHx8MTc2NDE3NDQ5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gantt chart"
+    },
+    {
+      "id": "rd-problem-robotics",
+      "description": "Industrial robot arm in a factory setting",
+      "imageUrl": "https://images.unsplash.com/photo-1567789884554-0b844b597180?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYWN0b3J5JTIwcm9ib3R8ZW58MHx8fHwxNzY0MjM5NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "factory robot"
+    },
+    {
+      "id": "rd-problem-ml",
+      "description": "Abstract visualization of a neural network",
+      "imageUrl": "https://images.unsplash.com/photo-1644325349124-d1756b79dd42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc2NDEzNjU1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neural network"
+    },
+    {
+      "id": "rd-problem-textile",
+      "description": "Automated loom in a textile factory",
+      "imageUrl": "https://images.unsplash.com/photo-1606053929013-311c13f97b5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZXh0aWxlJTIwZmFjdG9yeXxlbnwwfHx8fDE3NjQyMzk0MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "textile factory"
+    },
+    {
+      "id": "solver-hero",
+      "description": "Diverse group of students and engineers collaborating",
+      "imageUrl": "https://images.unsplash.com/photo-1742112125635-6f8201c6ee3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcnMlMjBjb2xsYWJvcmF0aW5nfGVufDB8fHx8MTc2NDIzNTc2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "engineers collaborating"
+    },
+    {
+      "id": "case-study-textile-before",
+      "description": "Chaotic pile of fabric scraps",
+      "imageUrl": "https://images.unsplash.com/photo-1752168563507-11337af84c78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYWJyaWMlMjBzY3JhcHN8ZW58MHx8fHwxNzY0MjM5NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fabric scraps"
+    },
+    {
+      "id": "case-study-textile-after",
+      "description": "Neatly stacked and sorted fabric",
+      "imageUrl": "https://images.unsplash.com/photo-1566819089778-333539a94029?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzb3J0ZWQlMjBmYWJyaWN8ZW58MHx8fHwxNzY0MjM5NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sorted fabric"
+    },
+    {
+      "id": "case-study-electronics-before",
+      "description": "Table with disorganized electronic components",
+      "imageUrl": "https://images.unsplash.com/photo-1729883596874-4372ae94435f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZXNzeSUyMGVsZWN0cm9uaWNzfGVufDB8fHx8MTc2NDIzOTQyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "messy electronics"
+    },
+    {
+      "id": "case-study-electronics-after",
+      "description": "Well-organized electronic components in trays",
+      "imageUrl": "https://images.unsplash.com/photo-1698226929297-0361c435ee7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxvcmdhbml6ZWQlMjBjb21wb25lbnRzfGVufDB8fHx8MTc2NDIzOTQyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "organized components"
+    },
+    {
+      "id": "prototype-textile",
+      "description": "A small robot sorting fabric scraps",
+      "imageUrl": "https://images.unsplash.com/photo-1763776091902-3d58451c42fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzb3J0aW5nJTIwcm9ib3R8ZW58MHx8fHwxNzY0MjM5NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sorting robot"
+    },
+    {
+      "id": "prototype-electronics",
+      "description": "A custom jig for assembling an electronic accessory",
+      "imageUrl": "https://picsum.photos/seed/proto-electronics/600/400",
+      "imageHint": "assembly jig"
+    },
+    {
+      "id": "dashboard-preview",
+      "description": "A preview of the unified dashboard",
+      "imageUrl": "https://images.unsplash.com/photo-1635183607544-bf69187cc310?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkYXNoYm9hcmQlMjB1aXxlbnwwfHx8fDE3NjQyMTg0NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard ui"
+    },
+    {
+      "id": "evaluator-panel-preview",
+      "description": "A preview of the evaluator panel UI",
+      "imageUrl": "https://picsum.photos/seed/eval-preview/1200/800",
+      "imageHint": "analytics ui"
+    },
+    {
+      "id": "community-hero",
+      "description": "A large crowd at a hackathon event",
+      "imageUrl": "https://images.unsplash.com/photo-1560439514-0fc9d2cd5e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoYWNrYXRob24lMjBldmVudHxlbnwwfHx8fDE3NjQyMzk0MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hackathon event"
+    },
+    {
+      "id": "security-hero",
+      "description": "Abstract digital security concept with locks and data streams",
+      "imageUrl": "https://images.unsplash.com/photo-1667453466805-75bbf36e8707?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwc2VjdXJpdHl8ZW58MHx8fHwxNzY0MjM5NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital security"
+    }
+  ]
 }
