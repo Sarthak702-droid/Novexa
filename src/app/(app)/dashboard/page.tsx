@@ -120,8 +120,8 @@ export default function DashboardPage() {
         transition={{ staggerChildren: 0.1, delay: 0.4 }}
         className="grid gap-8 pt-8 md:grid-cols-2"
       >
-        <motion.div variants={cardVariants} whileHover={hoverEffect} className="col-span-1">
-          <Card>
+        <motion.div variants={cardVariants} whileHover={hoverEffect}>
+          <Card className="h-full">
             <CardHeader>
               <CardTitle>BI Platform</CardTitle>
               <CardDescription>
@@ -138,8 +138,8 @@ export default function DashboardPage() {
           </Card>
         </motion.div>
 
-        <motion.div variants={cardVariants} whileHover={hoverEffect} className="col-span-1">
-          <Card>
+        <motion.div variants={cardVariants} whileHover={hoverEffect}>
+          <Card className="h-full">
             <CardHeader>
               <CardTitle>R&amp;D Marketplace</CardTitle>
               <CardDescription>
@@ -164,7 +164,7 @@ export default function DashboardPage() {
         animate="visible"
         transition={{ delay: 0.6 }}
         variants={cardVariants}
-         whileHover={{...hoverEffect, scale: 1.02}}
+        whileHover={hoverEffect}
       >
         <Card>
           <CardHeader>
