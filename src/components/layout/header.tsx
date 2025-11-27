@@ -1,7 +1,6 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { Logo } from '@/components/icons/logo';
 import PillNav from '@/components/ui/pill-nav';
 
 const navLinks = [
@@ -21,8 +20,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-center">
         <PillNav
-          logo="/grid.svg"
-          logoAlt="InnoGrid AI Logo"
+          logoText="InnoGrid AI"
           items={navLinks}
           activeHref={pathname}
           baseColor="hsl(var(--primary))"

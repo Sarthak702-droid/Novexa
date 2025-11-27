@@ -10,8 +10,7 @@ export type PillNavItem = {
 };
 
 export interface PillNavProps {
-  logo: string;
-  logoAlt?: string;
+  logoText?: string;
   items: PillNavItem[];
   activeHref?: string;
   className?: string;
@@ -25,8 +24,7 @@ export interface PillNavProps {
 }
 
 const PillNav: React.FC<PillNavProps> = ({
-  logo,
-  logoAlt = 'Logo',
+  logoText = 'InnoGrid AI',
   items,
   activeHref,
   className = '',
@@ -43,7 +41,6 @@ const PillNav: React.FC<PillNavProps> = ({
   const circleRefs = useRef<Array<HTMLSpanElement | null>>([]);
   const tlRefs = useRef<Array<gsap.core.Timeline | null>>([]);
   const activeTweenRefs = useRef<Array<gsap.core.Tween | null>>([]);
-  const logoImgRef = useRef<HTMLImageElement | null>(null);
   const logoTweenRef = useRef<gsap.core.Tween | null>(null);
   const hamburgerRef = useRef<HTMLButtonElement | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
@@ -163,17 +160,29 @@ const PillNav: React.FC<PillNavProps> = ({
   };
 
   const handleLogoEnter = () => {
-    const img = logoImgRef.current;
-    if (!img) return;
+    const logo = logoRef.current;
+    if (!logo) return;
     logoTweenRef.current?.kill();
-    gsap.set(img, { rotate: 0 });
-    logoTweenRef.current = gsap.to(img, {
-      rotate: 360,
+    logoTweenRef.current = gsap.to(logo, {
+      scale: 1.05,
       duration: 0.2,
       ease,
       overwrite: 'auto'
     });
   };
+
+  const handleLogoLeave = () => {
+    const logo = logoRef.current;
+    if (!logo) return;
+    logoTweenRef.current?.kill();
+    logoTweenRef.current = gsap.to(logo, {
+      scale: 1,
+      duration: 0.2,
+      ease,
+      overwrite: 'auto'
+    });
+  };
+
 
   const toggleMobileMenu = () => {
     const newState = !isMobileMenuOpen;
@@ -258,16 +267,17 @@ const PillNav: React.FC<PillNavProps> = ({
             href="/"
             aria-label="Home"
             onMouseEnter={handleLogoEnter}
+            onMouseLeave={handleLogoLeave}
             role="menuitem"
             ref={logoRef}
-            className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden"
+            className="rounded-full px-4 py-2 inline-flex items-center justify-center overflow-hidden font-headline font-bold text-xl"
             style={{
-              width: 'var(--nav-h)',
               height: 'var(--nav-h)',
-              background: 'var(--base, #000)'
+              background: 'var(--base, #000)',
+              color: 'var(--pill-bg, #fff)'
             }}
           >
-            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+            {logoText}
         </Link>
         
 
