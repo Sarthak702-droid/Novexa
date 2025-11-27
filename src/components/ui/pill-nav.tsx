@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
+import GradientText from './GradientText';
 
 export type PillNavItem = {
   label: string;
@@ -24,14 +25,14 @@ export interface PillNavProps {
 }
 
 const PillNav: React.FC<PillNavProps> = ({
-  logoText = 'InnoGrid AI',
+  logoText = 'InnoGrid',
   items,
   activeHref,
   className = '',
   ease = 'power3.easeOut',
-  baseColor = '#fff',
-  pillColor = '#060010',
-  hoveredPillTextColor = '#060010',
+  baseColor = 'hsl(var(--primary))',
+  pillColor = 'hsl(var(--background))',
+  hoveredPillTextColor = 'hsl(var(--primary-foreground))',
   pillTextColor,
   onMobileMenuClick,
   initialLoadAnimation = true
@@ -277,7 +278,13 @@ const PillNav: React.FC<PillNavProps> = ({
               color: 'var(--base, #000)'
             }}
           >
-            {logoText}
+           <GradientText
+              colors={["#29ABE2", "#F9A825", "#B19EEF", "#29ABE2"]}
+              animationSpeed={5}
+              className="font-headline text-2xl font-bold"
+            >
+              {logoText}
+            </GradientText>
         </Link>
         
 
