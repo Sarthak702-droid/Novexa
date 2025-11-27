@@ -94,9 +94,9 @@ export default function HomePage() {
             <div className="mx-auto max-w-4xl text-center">
                <GradientText
                 colors={['#ffffff', '#29ABE2', '#ffffff']}
-                className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-foreground"
+                className="font-body text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-foreground [animation-play-state:paused] group-hover:[animation-play-state:running]"
               >
-                AI Product Intelligence + R&D Crowdsourcing Platform
+                AI Product Intelligence + R&amp;D Crowdsourcing Platform
               </GradientText>
               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 text-lg text-muted-foreground">
                 <p className="font-semibold">For small brands → better decisions</p>
