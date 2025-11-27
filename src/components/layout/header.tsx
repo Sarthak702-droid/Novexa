@@ -1,6 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Button } from '@/components/ui/button';
 import PillNav from '@/components/ui/pill-nav';
 
 const navLinks = [
@@ -18,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-slate-900">
-      <div className="container flex h-20 items-center justify-start">
+      <div className="container flex h-20 items-center justify-between">
         <PillNav
           logoText="InnoGrid"
           items={navLinks}
@@ -28,6 +30,15 @@ export default function Header() {
           hoveredPillTextColor="#000000"
           pillTextColor="#000000"
         />
+
+        <div className="hidden md:flex items-center gap-2">
+          <Button variant="ghost" className="text-white hover:bg-slate-800 hover:text-white" asChild>
+            <Link href="/login">Login</Link>
+          </Button>
+          <Button variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
+            <Link href="/signup">Sign Up</Link>
+          </Button>
+        </div>
       </div>
     </header>
   );
