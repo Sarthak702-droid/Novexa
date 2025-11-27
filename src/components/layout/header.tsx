@@ -17,16 +17,16 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-muted/95 backdrop-blur supports-[backdrop-filter]:bg-muted/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-20 items-center justify-start px-0">
         <PillNav
           logoText="InnoGrid"
           items={navLinks}
           activeHref={pathname}
           baseColor="hsl(var(--primary))"
-          pillColor="hsl(var(--background))"
-          hoveredPillTextColor="hsl(var(--primary-foreground))"
-          pillTextColor="hsl(var(--primary))"
+          pillColor="hsl(var(--muted))"
+          hoveredPillTextColor="hsl(var(--primary))"
+          pillTextColor="hsl(var(--primary-foreground))"
         />
       </div>
     </header>
