@@ -247,7 +247,7 @@ const PillNav: React.FC<PillNavProps> = ({
   const isRouterLink = (href?: string) => href && !isExternalLink(href);
 
   const cssVars = {
-    ['--base']: '#000000',
+    ['--base']: baseColor,
     ['--pill-bg']: pillColor,
     ['--hover-text']: '#000000',
     ['--pill-text']: '#000000',
@@ -308,7 +308,8 @@ const PillNav: React.FC<PillNavProps> = ({
                 background: 'var(--pill-bg, #fff)',
                 color: 'var(--pill-text, var(--base, #000))',
                 paddingLeft: 'var(--pill-pad-x)',
-                paddingRight: 'var(--pill-pad-x)'
+                paddingRight: 'var(--pill-pad-x)',
+                fontWeight: 'bold',
               };
 
               const PillContent = (
