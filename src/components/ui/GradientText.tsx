@@ -27,7 +27,7 @@ export default function GradientText({
     >
       {showBorder && (
         <div
-          className="absolute inset-0 bg-cover z-0 pointer-events-none [animation-play-state:paused] group-hover:[animation-play-state:running] animate-gradient"
+          className="absolute inset-0 bg-cover z-0 pointer-events-none animate-gradient [animation-play-state:paused] group-hover:[animation-play-state:running]"
           style={{
             ...gradientStyle,
             backgroundSize: '300% 100%'
