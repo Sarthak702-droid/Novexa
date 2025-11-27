@@ -16,6 +16,7 @@ import {
   ShieldCheck,
   Package,
   ArrowRight,
+  Users,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
