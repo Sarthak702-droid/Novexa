@@ -56,9 +56,7 @@ export default function CommunityPage() {
         </div>
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4">
-              <Trophy className="w-4 h-4 mr-2" /> Join the Vanguard
-            </Badge>
+            
             <h1 className="text-4xl font-bold font-headline tracking-tight lg:text-5xl">
               Innovate. Compete. Grow.
             </h1>
