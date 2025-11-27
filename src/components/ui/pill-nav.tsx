@@ -247,10 +247,10 @@ const PillNav: React.FC<PillNavProps> = ({
   const isRouterLink = (href?: string) => href && !isExternalLink(href);
 
   const cssVars = {
-    ['--base']: baseColor,
+    ['--base']: '#000000',
     ['--pill-bg']: pillColor,
-    ['--hover-text']: hoveredPillTextColor,
-    ['--pill-text']: resolvedPillTextColor,
+    ['--hover-text']: '#000000',
+    ['--pill-text']: '#000000',
     ['--nav-h']: '42px',
     ['--logo']: '36px',
     ['--pill-pad-x']: '18px',
@@ -353,7 +353,7 @@ const PillNav: React.FC<PillNavProps> = ({
               );
 
               const basePillClasses =
-                'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-semibold text-[16px] leading-[0] uppercase tracking-[0.2px] whitespace-nowrap cursor-pointer px-0';
+                'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-bold text-[16px] leading-[0] uppercase tracking-[0.2px] whitespace-nowrap cursor-pointer px-0';
 
               return (
                 <li key={item.href} role="none" className="flex h-full">
