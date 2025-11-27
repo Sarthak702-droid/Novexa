@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
-import BlobCursor from '@/components/ui/blob-cursor';
 
 export const metadata: Metadata = {
   title: 'InnoGrid AI',
@@ -25,7 +24,6 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('min-h-screen bg-background font-body antialiased')}>
-        <BlobCursor />
         {children}
         <Toaster />
       </body>
