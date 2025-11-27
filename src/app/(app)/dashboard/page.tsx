@@ -24,6 +24,11 @@ export default function DashboardPage() {
     visible: { opacity: 1, y: 0 },
   };
 
+  const hoverEffect = {
+    scale: 1.05,
+    transition: { duration: 0.2 },
+  };
+
   return (
     <div className="flex-1 space-y-4 p-4 sm:p-8 pt-6">
       <motion.div
@@ -45,7 +50,7 @@ export default function DashboardPage() {
         transition={{ staggerChildren: 0.1 }}
         className="grid gap-4 md:grid-cols-2 lg:grid-cols-4"
       >
-        <motion.div variants={cardVariants}>
+        <motion.div variants={cardVariants} whileHover={hoverEffect}>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
@@ -61,7 +66,7 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
         </motion.div>
-        <motion.div variants={cardVariants}>
+        <motion.div variants={cardVariants} whileHover={hoverEffect}>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
@@ -77,7 +82,7 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
         </motion.div>
-        <motion.div variants={cardVariants}>
+        <motion.div variants={cardVariants} whileHover={hoverEffect}>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
@@ -91,7 +96,7 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
         </motion.div>
-        <motion.div variants={cardVariants}>
+        <motion.div variants={cardVariants} whileHover={hoverEffect}>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
@@ -115,7 +120,7 @@ export default function DashboardPage() {
         transition={{ staggerChildren: 0.1, delay: 0.4 }}
         className="grid gap-8 pt-8 md:grid-cols-2"
       >
-        <motion.div variants={cardVariants} className="col-span-1">
+        <motion.div variants={cardVariants} whileHover={hoverEffect} className="col-span-1">
           <Card>
             <CardHeader>
               <CardTitle>BI Platform</CardTitle>
@@ -133,7 +138,7 @@ export default function DashboardPage() {
           </Card>
         </motion.div>
 
-        <motion.div variants={cardVariants} className="col-span-1">
+        <motion.div variants={cardVariants} whileHover={hoverEffect} className="col-span-1">
           <Card>
             <CardHeader>
               <CardTitle>R&amp;D Marketplace</CardTitle>
@@ -159,6 +164,7 @@ export default function DashboardPage() {
         animate="visible"
         transition={{ delay: 0.6 }}
         variants={cardVariants}
+         whileHover={{...hoverEffect, scale: 1.02}}
       >
         <Card>
           <CardHeader>
