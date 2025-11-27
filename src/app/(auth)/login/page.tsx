@@ -9,7 +9,6 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Logo } from '@/components/icons/logo';
 
 export default function LoginPage() {
   return (
@@ -18,7 +17,6 @@ export default function LoginPage() {
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-center">
              <Link href="/" className="flex items-center justify-center gap-2 mb-4">
-              <Logo className="h-8 w-8" />
               <span className="font-headline text-2xl font-bold">InnoGrid AI</span>
             </Link>
             <h1 className="text-3xl font-bold font-headline">Login</h1>

@@ -11,7 +11,6 @@ import {
   SidebarTrigger,
   SidebarInset,
 } from '@/components/ui/sidebar';
-import { Logo } from '@/components/icons/logo';
 import {
   LayoutDashboard,
   FileText,
@@ -42,7 +41,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <Sidebar>
         <SidebarHeader>
           <div className="flex items-center gap-2">
-            <Logo className="w-8 h-8 text-primary" />
             <h1 className="font-headline text-lg font-semibold">InnoGrid AI</h1>
           </div>
         </SidebarHeader>

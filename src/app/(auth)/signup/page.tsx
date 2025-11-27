@@ -10,7 +10,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Logo } from '@/components/icons/logo';
 
 export default function SignupPage() {
   return (
@@ -18,7 +17,6 @@ export default function SignupPage() {
       <Card className="mx-auto max-w-sm">
         <CardHeader>
            <Link href="/" className="flex items-center justify-center gap-2 mb-4">
-              <Logo className="h-8 w-8" />
               <span className="font-headline text-2xl font-bold">InnoGrid AI</span>
             </Link>
           <CardTitle className="text-2xl font-headline">Sign Up</CardTitle>

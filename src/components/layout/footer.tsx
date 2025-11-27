@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Logo } from '@/components/icons/logo';
 import { Button } from '@/components/ui/button';
 
 const sections = [
@@ -52,7 +51,6 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <Logo className="h-8 w-8" />
               <span className="font-headline text-xl font-bold">InnoGrid AI</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
@@ -79,7 +77,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-                &amp;copy; {new Date().getFullYear()} InnoGrid AI. All rights reserved.
+                &copy; {new Date().getFullYear()} InnoGrid AI. All rights reserved.
             </p>
             <div className="flex items-center gap-4 mt-4 sm:mt-0">
                 <SocialIcon href="#">
