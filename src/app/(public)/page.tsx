@@ -19,6 +19,7 @@ import {
   Rocket,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import LiquidEther from '@/components/ui/liquid-ether';
 
 const whyFeatures = [
   {
@@ -61,7 +62,26 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative pt-24 pb-12 md:pt-32 md:pb-20">
+        <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <LiquidEther
+              colors={['#29ABE2', '#F9A825', '#B19EEF']}
+              mouseForce={20}
+              cursorSize={100}
+              isViscous={false}
+              viscous={30}
+              iterationsViscous={32}
+              iterationsPoisson={32}
+              resolution={0.5}
+              isBounce={false}
+              autoDemo={true}
+              autoSpeed={0.5}
+              autoIntensity={2.2}
+              takeoverDuration={0.25}
+              autoResumeDelay={3000}
+              autoRampDuration={0.6}
+            />
+          </div>
           <div
             aria-hidden="true"
             className="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
