@@ -28,10 +28,10 @@ export interface BlobCursorProps {
 
 export default function BlobCursor({
   blobType = 'circle',
-  fillColor = '#29ABE2',
+  fillColor = '#5227FF',
   trailCount = 3,
-  sizes = [15, 30, 20],
-  innerSizes = [5, 10, 8],
+  sizes = [25, 40, 30],
+  innerSizes = [8, 12, 10],
   innerColor = 'rgba(255,255,255,0.8)',
   opacities = [0.6, 0.6, 0.6],
   shadowColor = 'rgba(0,0,0,0.25)',
