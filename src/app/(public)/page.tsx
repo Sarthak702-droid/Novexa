@@ -93,7 +93,7 @@ export default function HomePage() {
           <div className="container relative">
             <div className="mx-auto max-w-4xl text-center">
                <GradientText
-                colors={['#ffffff', '#29ABE2', '#ffffff']}
+                colors={['#a0a0a0', '#29ABE2', '#a0a0a0']}
                 className="font-body text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-foreground [animation-play-state:paused] group-hover:[animation-play-state:running]"
               >
                 AI Product Intelligence + R&amp;D Crowdsourcing Platform
@@ -148,7 +148,7 @@ export default function HomePage() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BrainCircuit className="w-6 h-6 text-primary" />
-                    <span>R&D for Enterprises</span>
+                    <span>R&amp;D for Enterprises</span>
                   </CardTitle>
                   <CardDescription>
                     Solve complex technical challenges by crowdsourcing solutions from a global talent pool of engineers and experts.
