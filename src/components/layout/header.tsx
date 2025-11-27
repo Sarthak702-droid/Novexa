@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-slate-900">
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container flex h-20 items-center">
         <PillNav
           logoText="InnoGrid"
           items={navLinks}
@@ -31,7 +31,7 @@ export default function Header() {
           pillTextColor="#000000"
         />
 
-        <div className="hidden md:flex items-center gap-2">
+        <div className="ml-auto hidden md:flex items-center gap-2">
           <Button variant="ghost" className="text-white hover:bg-slate-800 hover:text-white" asChild>
             <Link href="/login">Login</Link>
           </Button>
