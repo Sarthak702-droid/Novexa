@@ -23,11 +23,11 @@ export default function GradientText({
 
   return (
     <div
-      className={`relative mx-auto flex max-w-fit flex-row items-center justify-center rounded-[1.25rem] font-medium backdrop-blur transition-shadow duration-500 overflow-hidden cursor-pointer ${className}`}
+      className={`group relative mx-auto flex max-w-fit flex-row items-center justify-center rounded-[1.25rem] font-medium backdrop-blur transition-shadow duration-500 overflow-hidden cursor-pointer ${className}`}
     >
       {showBorder && (
         <div
-          className="absolute inset-0 bg-cover z-0 pointer-events-none animate-gradient"
+          className="absolute inset-0 bg-cover z-0 pointer-events-none [animation-play-state:paused] group-hover:[animation-play-state:running] animate-gradient"
           style={{
             ...gradientStyle,
             backgroundSize: '300% 100%'
@@ -46,7 +46,7 @@ export default function GradientText({
         </div>
       )}
       <div
-        className="inline-block relative z-2 text-transparent bg-cover animate-gradient"
+        className="inline-block relative z-2 text-transparent bg-cover [animation-play-state:paused] group-hover:[animation-play-state:running] animate-gradient"
         style={{
           ...gradientStyle,
           backgroundClip: 'text',
