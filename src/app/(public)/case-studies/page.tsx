@@ -82,11 +82,11 @@ export default function CaseStudiesPage() {
                       <CardContent className="p-0 space-y-6">
                         <div>
                           <h3 className="font-semibold font-headline">The Challenge</h3>
-                          <p className="text-muted-foreground mt-1">{study.challenge}</CardDescription>
+                          <p className="text-muted-foreground mt-1">{study.challenge}</p>
                         </div>
                         <div>
                           <h3 className="font-semibold font-headline">The InnoGrid Solution</h3>
-                          <p className="text-muted-foreground mt-1">{study.solution}</CardDescription>
+                          <p className="text-muted-foreground mt-1">{study.solution}</p>
                         </div>
 
                         <div>
