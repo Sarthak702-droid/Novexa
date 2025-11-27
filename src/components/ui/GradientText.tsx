@@ -46,10 +46,9 @@ export default function GradientText({
         </div>
       )}
       <div
-        className="inline-block relative z-2 text-transparent bg-cover [animation-play-state:paused] group-hover:[animation-play-state:running] animate-gradient"
+        className="inline-block relative z-2 text-transparent bg-cover bg-clip-text animate-gradient [animation-play-state:paused] group-hover:[animation-play-state:running]"
         style={{
           ...gradientStyle,
-          backgroundClip: 'text',
           WebkitBackgroundClip: 'text',
           backgroundSize: '300% 100%'
         }}
