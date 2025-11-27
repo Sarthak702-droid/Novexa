@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import LiquidEther from '@/components/ui/liquid-ether';
-import BlurText from '@/components/ui/BlurText';
+import GradientText from '@/components/ui/GradientText';
 
 const whyFeatures = [
   {
@@ -92,13 +92,12 @@ export default function HomePage() {
           </div>
           <div className="container relative">
             <div className="mx-auto max-w-4xl text-center">
-              <BlurText
-                text="AI Product Intelligence + R&D Crowdsourcing Platform"
-                delay={100}
-                animateBy="words"
-                direction="top"
+               <GradientText
+                colors={['#ffffff', '#29ABE2', '#ffffff']}
                 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-foreground"
-              />
+              >
+                AI Product Intelligence + R&D Crowdsourcing Platform
+              </GradientText>
               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 text-lg text-muted-foreground">
                 <p className="font-semibold">For small brands → better decisions</p>
                 <p className="font-semibold">For enterprises → faster, cheaper prototypes</p>
