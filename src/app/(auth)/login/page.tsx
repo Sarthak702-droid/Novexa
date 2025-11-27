@@ -9,6 +9,13 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 export default function LoginPage() {
   return (
@@ -16,8 +23,13 @@ export default function LoginPage() {
       <div className="flex items-center justify-center py-12">
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-center">
-             <Link href="/" className="flex items-center justify-center gap-2 mb-4">
-              <span className="font-headline text-2xl font-bold">InnoGrid AI</span>
+            <Link
+              href="/"
+              className="flex items-center justify-center gap-2 mb-4"
+            >
+              <span className="font-headline text-2xl font-bold">
+                InnoGrid AI
+              </span>
             </Link>
             <h1 className="text-3xl font-bold font-headline">Login</h1>
             <p className="text-balance text-muted-foreground">
@@ -25,6 +37,32 @@ export default function LoginPage() {
             </p>
           </div>
           <div className="grid gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="login-as">Who is logging in</Label>
+              <Select>
+                <SelectTrigger id="login-as">
+                  <SelectValue placeholder="Select user type" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="brand">Brand</SelectItem>
+                  <SelectItem value="enterprise">Enterprise</SelectItem>
+                  <SelectItem value="solver">Solver</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="interest">Area of Interest</Label>
+              <Select>
+                <SelectTrigger id="interest">
+                  <SelectValue placeholder="Select area of interest" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="rnd">RnD</SelectItem>
+                  <SelectItem value="analysis">Analysis</SelectItem>
+                  <SelectItem value="deep-research">Deep research</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
               <Input
@@ -62,8 +100,10 @@ export default function LoginPage() {
         </div>
       </div>
       <div className="hidden bg-muted lg:block relative">
-         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
-         <p className="absolute bottom-4 right-4 text-sm text-muted-foreground">Photo by <a href="#" className='underline'>Unsplash User</a></p>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
+        <p className="absolute bottom-4 right-4 text-sm text-muted-foreground">
+          Photo by <a href="#" className="underline">Unsplash User</a>
+        </p>
       </div>
     </div>
   );
