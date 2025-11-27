@@ -28,13 +28,13 @@ export interface BlobCursorProps {
 
 export default function BlobCursor({
   blobType = 'circle',
-  fillColor = '#29ABE2',
+  fillColor = '#5227FF',
   trailCount = 3,
   sizes = [60, 125, 75],
   innerSizes = [20, 35, 25],
   innerColor = 'rgba(255,255,255,0.8)',
   opacities = [0.6, 0.6, 0.6],
-  shadowColor = 'rgba(0,0,0,0.1)',
+  shadowColor = 'rgba(0,0,0,0.75)',
   shadowBlur = 5,
   shadowOffsetX = 10,
   shadowOffsetY = 10,
@@ -46,7 +46,7 @@ export default function BlobCursor({
   slowDuration = 0.5,
   fastEase = 'power3.out',
   slowEase = 'power1.out',
-  zIndex = -1
+  zIndex = 9999
 }: BlobCursorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const blobsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -58,7 +58,7 @@ export default function BlobCursor({
   }, []);
 
   const handleMove = useCallback(
-    (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
+    (e: MouseEvent | TouchEvent) => {
       const { left, top } = updateOffset();
       const x = 'clientX' in e ? e.clientX : e.touches[0].clientX;
       const y = 'clientY' in e ? e.clientY : e.touches[0].clientY;
@@ -78,16 +78,20 @@ export default function BlobCursor({
   );
 
   useEffect(() => {
-    const onResize = () => updateOffset();
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, [updateOffset]);
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('touchmove', handleMove);
+    window.addEventListener('resize', updateOffset);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMove);
+      window.removeEventListener('touchmove', handleMove);
+      window.removeEventListener('resize', updateOffset);
+    };
+  }, [handleMove, updateOffset]);
 
   return (
     <div
       ref={containerRef}
-      onMouseMove={handleMove}
-      onTouchMove={handleMove}
       className="fixed top-0 left-0 w-full h-full pointer-events-none"
       style={{ zIndex }}
     >
