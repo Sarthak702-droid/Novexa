@@ -98,7 +98,7 @@ export default function HomePage() {
               >
                 AI Product Intelligence + R&amp;D Crowdsourcing Platform
               </GradientText>
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 text-lg text-muted-foreground">
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 text-lg text-foreground/80">
                 <p className="font-semibold">For small brands → better decisions</p>
                 <p className="font-semibold">For enterprises → faster, cheaper prototypes</p>
               </div>
