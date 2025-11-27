@@ -18,9 +18,9 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-start px-4">
+      <div className="container flex h-20 items-center justify-start px-0">
         <PillNav
-          logoText="InnoGrid AI"
+          logoText="InnoGrid"
           items={navLinks}
           activeHref={pathname}
           baseColor="hsl(var(--primary))"
