@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import LiquidEther from '@/components/ui/liquid-ether';
+import GooeyNav from '@/components/ui/GooeyNav';
 
 const whyFeatures = [
   {
@@ -57,6 +58,11 @@ const whyFeatures = [
 export default function HomePage() {
   const heroBiImage = PlaceHolderImages.find((img) => img.id === 'hero-bi');
   const heroRdImage = PlaceHolderImages.find((img) => img.id === 'hero-rd');
+
+  const navItems = [
+    { label: 'Try BI Templates', href: '/templates' },
+    { label: 'Submit R&D Problem', href: '/rd-marketplace' },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -98,13 +104,11 @@ export default function HomePage() {
                 <p className="font-semibold">For small brands → better decisions</p>
                 <p className="font-semibold">For enterprises → faster, cheaper prototypes</p>
               </div>
-              <div className="mt-10 flex items-center justify-center gap-4">
-                <Button asChild size="lg">
-                  <Link href="/templates">Try BI Templates</Link>
-                </Button>
-                <Button asChild size="lg" variant="accent">
-                  <Link href="/rd-marketplace">Submit R&amp;D Problem</Link>
-                </Button>
+              <div className="mt-10 flex items-center justify-center">
+                 <GooeyNav
+                    items={navItems}
+                    colors={[1, 2, 3, 4]}
+                 />
               </div>
             </div>
           </div>
