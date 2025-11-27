@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import LiquidEther from '@/components/ui/liquid-ether';
+import GlitchText from '@/components/ui/GlitchText';
 
 const whyFeatures = [
   {
@@ -91,9 +92,14 @@ export default function HomePage() {
           </div>
           <div className="container relative">
             <div className="mx-auto max-w-4xl text-center">
-              <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-                AI Product Intelligence + R&amp;D Crowdsourcing Platform
-              </h1>
+              <GlitchText
+                speed={1}
+                enableShadows={true}
+                enableOnHover={true}
+                className='font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-foreground'
+              >
+                AI Product Intelligence + R&D Crowdsourcing Platform
+              </GlitchText>
               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 text-lg text-muted-foreground">
                 <p className="font-semibold">For small brands → better decisions</p>
                 <p className="font-semibold">For enterprises → faster, cheaper prototypes</p>
@@ -144,7 +150,7 @@ export default function HomePage() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BrainCircuit className="w-6 h-6 text-primary" />
-                    <span>R&amp;D for Enterprises</span>
+                    <span>R&D for Enterprises</span>
                   </CardTitle>
                   <CardDescription>
                     Solve complex technical challenges by crowdsourcing solutions from a global talent pool of engineers and experts.
@@ -162,7 +168,7 @@ export default function HomePage() {
                     />
                   )}
                    <Button asChild variant="link" className="mt-4 px-0">
-                    <Link href="/rd-marketplace">See R&amp;D Marketplace <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link href="/rd-marketplace">See R&D Marketplace <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </CardContent>
               </Card>
