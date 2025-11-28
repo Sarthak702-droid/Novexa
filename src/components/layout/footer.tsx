@@ -51,7 +51,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <span className="font-headline text-xl font-bold">InnoGrid AI</span>
+              <span className="font-headline text-xl font-bold">InnoGrid</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               AI Product Intelligence + R&D Crowdsourcing Platform.
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-                &copy; {new Date().getFullYear()} InnoGrid AI. All rights reserved.
+                &copy; {new Date().getFullYear()} InnoGrid. All rights reserved.
             </p>
             <div className="flex items-center gap-4 mt-4 sm:mt-0">
                 <SocialIcon href="#">

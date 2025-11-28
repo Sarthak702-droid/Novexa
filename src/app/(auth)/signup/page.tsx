@@ -17,7 +17,7 @@ export default function SignupPage() {
       <Card className="mx-auto max-w-sm">
         <CardHeader>
            <Link href="/" className="flex items-center justify-center gap-2 mb-4">
-              <span className="font-headline text-2xl font-bold">InnoGrid AI</span>
+              <span className="font-headline text-2xl font-bold">InnoGrid</span>
             </Link>
           <CardTitle className="text-2xl font-headline">Sign Up</CardTitle>
           <CardDescription>

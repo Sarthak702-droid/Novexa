@@ -28,7 +28,7 @@ export default function LoginPage() {
               className="flex items-center justify-center gap-2 mb-4"
             >
               <span className="font-headline text-2xl font-bold">
-                InnoGrid AI
+                InnoGrid
               </span>
             </Link>
             <h1 className="text-3xl font-bold font-headline">Login</h1>
