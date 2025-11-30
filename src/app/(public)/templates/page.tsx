@@ -1,55 +1,66 @@
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import InfiniteMenu from '@/components/ui/InfiniteMenu';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import Link from 'next/link';
 
 const templates = [
   {
     title: 'Existing Product Analytics',
     description: 'Deep-dive into your product performance, sales trends, and customer behavior.',
     imageId: 'bi-feature-analytics',
+    link: '/signup'
   },
   {
     title: 'Review Summarizer',
     description: 'AI-powered summary of thousands of customer reviews to find key themes.',
     imageId: 'bi-feature-summary',
+    link: '/signup'
   },
   {
     title: 'Launch Planner',
     description: 'Structure your new product launch and track progress against key milestones.',
     imageId: 'bi-feature-planner',
+    link: '/signup'
   },
   {
     title: 'Price Optimization',
     description: 'Analyze market data and costs to find the optimal price for your products.',
     imageId: 'bi-feature-price',
+    link: '/signup'
   },
   {
     title: 'Unit Economics & Margin Simulator',
     description: 'Model your costs and revenue to understand profitability at a granular level.',
     imageId: 'bi-feature-economics',
+    link: '/signup'
   },
   {
     title: 'Competitor Price Mapping',
     description: 'Track competitor pricing automatically to stay competitive in the market.',
-    imageId: 'bi-feature-price', // Reusing an image
+    imageId: 'bi-feature-price',
+    link: '/signup'
   },
     {
     title: 'Sales Forecast',
     description: 'Use historical data to predict future sales trends and manage inventory.',
-    imageId: 'bi-feature-simulation', // Reusing an image
+    imageId: 'bi-feature-simulation',
+    link: '/signup'
   },
 ];
 
 export default function TemplatesPage() {
+
+  const menuItems = templates.map(template => {
+    const image = PlaceHolderImages.find(
+      (img) => img.id === template.imageId
+    );
+    return {
+      image: image?.imageUrl || 'https://picsum.photos/600/600?grayscale',
+      link: template.link,
+      title: template.title,
+      description: template.description
+    }
+  });
+
+
   return (
     <>
       <section className="py-16 md:py-24 bg-muted">
@@ -66,44 +77,8 @@ export default function TemplatesPage() {
       </section>
 
       <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {templates.map((template) => {
-              const image = PlaceHolderImages.find(
-                (img) => img.id === template.imageId
-              );
-              return (
-                <Card
-                  key={template.title}
-                  className="flex flex-col overflow-hidden transition-shadow hover:shadow-xl"
-                >
-                  <CardHeader>
-                    <CardTitle>{template.title}</CardTitle>
-                    <CardDescription>{template.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    {image && (
-                      <div className="aspect-video overflow-hidden rounded-md border bg-muted">
-                        <Image
-                          src={image.imageUrl}
-                          alt={template.title}
-                          width={600}
-                          height={400}
-                          data-ai-hint={image.imageHint}
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                    )}
-                  </CardContent>
-                  <CardFooter>
-                    <Button className="w-full" asChild>
-                      <Link href="/signup">Try Now</Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              );
-            })}
-          </div>
+        <div className="container h-[80vh] min-h-[600px] relative">
+           <InfiniteMenu items={menuItems}/>
         </div>
       </section>
     </>
