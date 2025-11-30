@@ -27,7 +27,7 @@ export default function LoginPage() {
             particleCount={100}
             particleSpread={15}
             speed={0.1}
-            particleBaseSize={15}
+            particleBaseSize={20}
             moveParticlesOnHover={true}
             alphaParticles={false}
             disableRotation={false}
