@@ -17,6 +17,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function DashboardPage() {
   const cardVariants = {
@@ -133,7 +134,9 @@ export default function DashboardPage() {
                 Access growth dashboards, analyze customer sentiment, and
                 optimize your pricing strategy.
               </p>
-              <Button>Explore BI Templates</Button>
+              <Button asChild>
+                <Link href="/templates">Explore BI Templates</Link>
+              </Button>
             </CardContent>
           </Card>
         </motion.div>
