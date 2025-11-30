@@ -20,14 +20,14 @@ import Particles from '@/components/ui/Particles';
 
 export default function LoginPage() {
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-background relative">
+    <div className="w-full h-screen flex items-center justify-center bg-muted relative">
        <div className="absolute inset-0 z-0">
           <Particles
             particleColors={['#29ABE2', '#F9A825']}
             particleCount={100}
             particleSpread={15}
             speed={0.1}
-            particleBaseSize={2}
+            particleBaseSize={15}
             moveParticlesOnHover={true}
             alphaParticles={false}
             disableRotation={false}
