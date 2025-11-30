@@ -17,41 +17,35 @@ import {
   BadgeDollarSign,
   Scaling,
   Rocket,
+  Cpu,
+  TestTube2,
+  Calculator,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import LiquidEther from '@/components/ui/liquid-ether';
 import GradientText from '@/components/ui/GradientText';
 
-const whyFeatures = [
+const platformPillars = [
   {
-    icon: BookCopy,
-    title: 'Templates Ecosystem',
-    description: 'Instantly access ML-powered BI templates for your specific industry needs.',
+    icon: Calculator,
+    title: 'Standard Analytics',
+    description:
+      'An instant self-diagnosis layer with 8 essential calculators for immediate business intelligence, democratizing complex analysis for all users.',
+    href: '/bi-platform',
   },
   {
-    icon: Users,
-    title: 'Vetted Solvers & Experts',
-    description: 'Tap into a global network of top-tier engineers, researchers, and domain experts.',
+    icon: Cpu,
+    title: 'AI Hub',
+    description:
+      'A virtual workforce of autonomous agents for strategic execution, replacing manual analysis with proactive, predictive insights.',
+    href: '/rd-marketplace',
   },
   {
-    icon: BrainCircuit,
-    title: 'BI + R&D Integrated',
-    description: 'Seamlessly move from data insights to creating custom R&D prototypes.',
-  },
-  {
-    icon: Database,
-    title: 'Proprietary Datasets',
-    description: 'Leverage unique, redacted datasets for robust model training and benchmarking.',
-  },
-  {
-    icon: BadgeDollarSign,
-    title: 'Lowest-Cost Prototypes',
-    description: 'Get working prototypes at a fraction of the cost of in-house development.',
-  },
-  {
-    icon: Scaling,
-    title: 'Scalable Intelligence',
-    description: 'From simple analytics to complex automation, our platform grows with you.',
+    icon: TestTube2,
+    title: 'Beta Labs',
+    description:
+      'An open R&D engine for innovation, data acquisition, and talent engagement through real-world challenges and community projects.',
+    href: '/community',
   },
 ];
 
@@ -92,23 +86,23 @@ export default function HomePage() {
           </div>
           <div className="container relative">
             <div className="mx-auto max-w-4xl text-center">
-               <GradientText
-                colors={['#a0a0a0', '#29ABE2', '#a0a0a0']}
-                className="font-body text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-foreground [animation-play-state:paused] group-hover:[animation-play-state:running]"
+              <GradientText
+                colors={['#333333', '#29ABE2', '#333333']}
+                className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-foreground [animation-play-state:paused] group-hover:[animation-play-state:running]"
               >
                 AI Product Intelligence + R&amp;D Crowdsourcing Platform
               </GradientText>
-              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 text-lg text-foreground/80">
-                <p className="font-semibold">For small brands → better decisions</p>
-                <p className="font-semibold">For enterprises → faster, cheaper prototypes</p>
+               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 text-lg text-foreground/80">
+                <p className="font-semibold text-foreground/80">For small brands → better decisions</p>
+                <p className="font-semibold text-foreground/80">For enterprises → faster, cheaper prototypes</p>
               </div>
               <div className="mt-10 flex items-center justify-center gap-4">
-                 <Button size="lg" asChild>
-                    <Link href="/templates">Try BI Templates</Link>
-                 </Button>
-                  <Button size="lg" variant="outline" asChild>
-                    <Link href="/rd-marketplace">Submit R&D Problem</Link>
-                 </Button>
+                <Button size="lg" asChild>
+                  <Link href="/templates">Try BI Templates</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="/rd-marketplace">Submit R&amp;D Problem</Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -125,7 +119,8 @@ export default function HomePage() {
                     <span>BI for Small Brands</span>
                   </CardTitle>
                   <CardDescription>
-                    Unlock insights from your sales, marketing, and customer data with AI-powered dashboards and templates.
+                    Unlock insights from your sales, marketing, and customer
+                    data with AI-powered dashboards and templates.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -140,7 +135,9 @@ export default function HomePage() {
                     />
                   )}
                   <Button asChild variant="link" className="mt-4 px-0">
-                    <Link href="/bi-platform">Explore BI Features <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link href="/bi-platform">
+                      Explore BI Features <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -151,7 +148,9 @@ export default function HomePage() {
                     <span>R&amp;D for Enterprises</span>
                   </CardTitle>
                   <CardDescription>
-                    Solve complex technical challenges by crowdsourcing solutions from a global talent pool of engineers and experts.
+                    Solve complex technical challenges by crowdsourcing
+                    solutions from a global talent pool of engineers and
+                    experts.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -165,8 +164,11 @@ export default function HomePage() {
                       data-ai-hint={heroRdImage.imageHint}
                     />
                   )}
-                   <Button asChild variant="link" className="mt-4 px-0">
-                    <Link href="/rd-marketplace">See R&D Marketplace <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Button asChild variant="link" className="mt-4 px-0">
+                    <Link href="/rd-marketplace">
+                      See R&amp;D Marketplace{' '}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -174,28 +176,36 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Why InnoGrid Section */}
+        {/* InnoGrid Ecosystem Section */}
         <section className="bg-muted py-16 md:py-24">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
-                Your Unfair Advantage
+                The InnoGrid Industrial Intelligence & Strategy Platform
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                InnoGrid isn't just another tool. It's an integrated ecosystem that provides an unmatched competitive edge.
+                An integrated ecosystem designed to drive strategy from the
+                factory floor to the boardroom.
               </p>
             </div>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {whyFeatures.map((feature) => (
-                <Card key={feature.title} className="text-center">
+            <div className="mt-12 grid gap-6 sm:grid-cols-1 lg:grid-cols-3">
+              {platformPillars.map((feature) => (
+                <Card key={feature.title} className="text-center flex flex-col">
                   <CardHeader>
                     <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                       <feature.icon className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="mt-4">{feature.title}</CardTitle>
                   </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">
+                      {feature.description}
+                    </p>
+                  </CardContent>
                   <CardContent>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <Button asChild variant="link">
+                        <Link href={feature.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
@@ -203,24 +213,29 @@ export default function HomePage() {
           </div>
         </section>
 
-         {/* Solver CTA Section */}
+        {/* Solver CTA Section */}
         <section className="py-16 md:py-24">
-            <div className="container">
-                <div className="relative overflow-hidden rounded-lg bg-primary/90 p-8 text-center md:p-12">
-                     <div aria-hidden="true" className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-                    <div className="relative">
-                        <h2 className="font-headline text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-                           Join the Grid. Solve Challenges. Get Paid.
-                        </h2>
-                        <p className="mt-4 text-lg text-primary-foreground/80">
-                            Are you an engineer, student, or researcher? Apply your skills to real-world problems and earn rewards.
-                        </p>
-                        <Button asChild size="lg" variant="secondary" className="mt-8">
-                            <Link href="/solver-portal">Become a Solver <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                        </Button>
-                    </div>
-                </div>
+          <div className="container">
+            <div className="relative overflow-hidden rounded-lg bg-primary/90 p-8 text-center md:p-12">
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+              <div className="relative">
+                <h2 className="font-headline text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
+                  Join the Grid. Solve Challenges. Get Paid.
+                </h2>
+                <p className="mt-4 text-lg text-primary-foreground/80">
+                  Are you an engineer, student, or researcher? Apply your skills
+                  to real-world problems and earn rewards.
+                </p>
+                <Button asChild size="lg" variant="secondary" className="mt-8">
+                  <Link href="/solver-portal">
+                    Become a Solver <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
+          </div>
         </section>
       </main>
     </div>

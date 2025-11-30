@@ -8,40 +8,42 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Trophy, Calendar, Database, Award, Users } from 'lucide-react';
+import { Trophy, Calendar, Database, Award, Users, TestTube2, Sprout, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const competitions = [
+const groundTruthProjects = [
   {
-    title: 'AI Supply Chain Hackathon',
-    status: 'Live',
-    prize: '₹50,000',
-    participants: 128,
-    endsIn: '14 days',
+    title: 'Mandi Price Watch',
+    description: 'Crowdsourcing local market prices to create a transparent, real-time inflation index for agricultural goods.',
+    imageId: 'beta-labs-mandi',
   },
   {
-    title: 'Retail Demand Forecasting Challenge',
-    status: 'Upcoming',
-    prize: '₹30,000',
-    participants: 0,
-    startsIn: '2 weeks',
-  },
-  {
-    title: 'IoT Predictive Maintenance Model',
-    status: 'Completed',
-    prize: '₹75,000',
-    participants: 96,
-    winner: 'Team_Innovate',
+    title: 'The Weaver Census',
+    description: 'Mapping handloom weaver communities to preserve heritage crafts and connect them with global markets.',
+    imageId: 'beta-labs-weaver',
   },
 ];
 
-const leaderboard = [
-    { rank: 1, name: 'Solver_AI_Pro', level: 'Expert', points: 12500, badge: '🥇' },
-    { rank: 2, name: 'CodeWizard_007', level: 'Gold', points: 11200, badge: '🥈' },
-    { rank: 3, name: 'DataQueen', level: 'Gold', points: 10500, badge: '🥉' },
-    { rank: 4, name: 'ProtoTyper', level: 'Silver', points: 8900, badge: '' },
-    { rank: 5, name: 'ML_Maverick', level: 'Silver', points: 8250, badge: '' },
-]
+const solverArenaChallenges = [
+  {
+    title: 'Reduce Fabric Cutting Waste by 15%',
+    prize: '₹2,50,000 + Contract',
+    participants: 128,
+    endsIn: '21 days',
+    status: 'Live',
+    industry: 'Textile',
+  },
+  {
+    title: 'Low-Cost Cold Storage Sensor',
+    prize: '₹1,00,000',
+    participants: 94,
+    endsIn: '45 days',
+    status: 'Live',
+    industry: 'Agriculture',
+  },
+];
+
 
 export default function CommunityPage() {
   return (
@@ -54,109 +56,103 @@ export default function CommunityPage() {
           <div className="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
           <div className="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
         </div>
-        <div className="container relative">
-          <div className="max-w-3xl mx-auto text-center">
-            
+        <div className="container relative text-center">
+             <div className="flex justify-center mb-4">
+                <TestTube2 className="w-16 h-16 text-primary" />
+            </div>
             <h1 className="text-4xl font-bold font-headline tracking-tight lg:text-5xl">
-              Innovate. Compete. Grow.
+              InnoGrid Beta Labs
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Our community is the heart of InnoGrid. Join talented solvers
-              from around the world, participate in high-stakes challenges, and
-              build the future of technology.
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+              Our forward-looking engine for open innovation, data acquisition, and talent engagement. This is where the future is built, together.
             </p>
             <Button size="lg" className="mt-8" asChild>
               <Link href="/solver-portal">Become a Solver</Link>
             </Button>
-          </div>
         </div>
       </section>
 
-      <section id="competitions" className="py-16 md:py-24 bg-muted">
+      <section id="ground-truth" className="py-16 md:py-24 bg-muted">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center font-headline">
-            Live &amp; Upcoming Competitions
-          </h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {competitions.map((comp) => (
-              <Card key={comp.title} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <CardTitle>{comp.title}</CardTitle>
-                    <Badge variant={comp.status === 'Live' ? 'destructive' : 'secondary'}>
-                      {comp.status}
-                    </Badge>
-                  </div>
-                  <CardDescription className="flex items-center gap-2 pt-2">
-                    <Trophy className="w-4 h-4 text-amber-500" />
-                    <span>Prize Pool: {comp.prize}</span>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex justify-between text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1.5"><Users className="w-4 h-4" /> {comp.participants} Participants</span>
-                    <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> {comp.status === 'Live' ? `${comp.endsIn} left` : `Starts in ${comp.startsIn}`}</span>
-                  </div>
-                  <Button className="w-full mt-6" disabled={comp.status !== 'Live'}>
-                    {comp.status === 'Live' ? 'Enter Competition' : 'Register Interest'}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold font-headline">
+              Ground Truth Projects
+            </h2>
+            <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
+              A volunteer network solving real-world problems by crowdsourcing authentic, local market data. These projects build unique datasets that power our entire ecosystem.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2">
+            {groundTruthProjects.map((project) => {
+              const image = PlaceHolderImages.find(img => img.id === project.imageId);
+              return (
+                <Card key={project.title} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-0">
+                    {image && <Image src={image.imageUrl} alt={project.title} width={800} height={500} className="rounded-t-lg object-cover aspect-[16/10]" data-ai-hint={image.imageHint} />}
+                  </CardContent>
+                  <CardHeader>
+                      <CardTitle>{project.title}</CardTitle>
+                      <CardDescription>{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                      <Button variant="secondary">
+                          <Sprout className="mr-2 h-4 w-4" /> Contribute
+                      </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
       
-      <section className="py-16 md:py-24">
-        <div className="container grid lg:grid-cols-5 gap-12 items-start">
-          <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold font-headline">Community Leaderboard</h2>
-            <p className="text-muted-foreground mt-2">Top solvers of the month. Climb the ranks by winning challenges and earning points.</p>
-             <div className="mt-8">
-              <Card>
-                <CardContent className="p-0">
-                  <div className="divide-y">
-                  {leaderboard.map(solver => (
-                    <div key={solver.rank} className="flex items-center p-4">
-                      <div className="text-lg font-bold w-12 text-center">{solver.badge || solver.rank}</div>
-                      <div className="flex-1">
-                        <p className="font-semibold">{solver.name}</p>
-                        <p className="text-sm text-muted-foreground">{solver.level} Level</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="font-bold">{solver.points.toLocaleString()}</p>
-                        <p className="text-sm text-muted-foreground">Points</p>
-                      </div>
+      <section id="solver-arena" className="py-16 md:py-24">
+        <div className="container">
+           <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold font-headline">
+              Solver Arena – Applied R&D Challenges
+            </h2>
+            <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
+              Where industry problems meet global talent. We structure complex R&D needs into high-stakes competitions with cash prizes and contracts.
+            </p>
+          </div>
+          <div className="space-y-4">
+            {solverArenaChallenges.map(challenge => (
+                <Card key={challenge.title} className="transition-all hover:shadow-md hover:-translate-y-1">
+                    <div className="p-4 grid md:grid-cols-4 lg:grid-cols-5 items-center gap-4">
+                        <div className="lg:col-span-2">
+                            <div className="flex items-center gap-2">
+                                <Badge variant={challenge.status === 'Live' ? 'destructive' : 'secondary'}>
+                                {challenge.status}
+                                </Badge>
+                                <Badge variant="outline">{challenge.industry}</Badge>
+                            </div>
+                            <p className="font-semibold mt-2">{challenge.title}</p>
+                        </div>
+                        <div className="text-sm">
+                            <p className="text-muted-foreground">Prize Pool</p>
+                            <p className="font-bold text-primary">{challenge.prize}</p>
+                        </div>
+                         <div className="text-sm">
+                            <p className="text-muted-foreground">Participants</p>
+                            <p className="font-semibold">{challenge.participants}</p>
+                        </div>
+                        <div className="text-right">
+                           <Button asChild>
+                               <Link href="#">View Challenge <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                           </Button>
+                        </div>
                     </div>
-                  ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-          <div className="lg:col-span-3">
-             <h2 className="text-3xl font-bold font-headline">Community Resources</h2>
-             <p className="text-muted-foreground mt-2">Everything you need to succeed as a solver.</p>
-             <div className="mt-8 grid sm:grid-cols-2 gap-6">
-                <Card>
-                  <CardHeader>
-                    <Award className="w-8 h-8 text-primary mb-2" />
-                    <CardTitle>Badges &amp; Certificates</CardTitle>
-                    <CardDescription>Earn verifiable credentials for every challenge you win to showcase on your portfolio.</CardDescription>
-                  </CardHeader>
                 </Card>
-                <Card>
-                  <CardHeader>
-                    <Database className="w-8 h-8 text-primary mb-2" />
-                    <CardTitle>Dataset Library</CardTitle>
-                    <CardDescription>Access a rich library of redacted and synthetic datasets to practice and hone your skills.</CardDescription>
-                  </CardHeader>
-                </Card>
-             </div>
+            ))}
           </div>
+           <div className="text-center mt-8">
+               <Button variant="outline" asChild>
+                   <Link href="#">See All Challenges</Link>
+               </Button>
+           </div>
         </div>
       </section>
-
     </>
   );
 }

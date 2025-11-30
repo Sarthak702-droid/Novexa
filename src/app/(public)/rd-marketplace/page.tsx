@@ -9,58 +9,43 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import {
-  FileCode,
+  TrendingUp,
   FlaskConical,
-  Clock,
-  Zap,
-  ShieldCheck,
-  Package,
+  MessageSquare,
+  Globe,
   ArrowRight,
   Users,
+  TestTube,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const benefits = [
+const aiAgents = [
   {
-    icon: Package,
-    title: 'Functional Prototype',
+    icon: TrendingUp,
+    title: 'The Trend Spotter',
     description:
-      'Receive a working prototype that demonstrates the core solution to your problem.',
+      'Predicts color, fabric, and feature trends 3 months in advance by scanning global social media, Pantone, and viral keywords.',
+    outcome: 'Predict Demand & Reduce Dead Stock',
+    imageId: 'ai-hub-trends',
   },
   {
-    icon: FileCode,
-    title: 'Code & IP Transfer',
+    icon: MessageSquare,
+    title: 'Virtual Focus Group',
     description:
-      'Get the full source code, documentation, and IP rights for the winning solution.',
+      'Critiques your product ideas using 100 virtual personas (Students, Housewives, Geeks) to provide instant, diverse feedback.',
+    outcome: 'Save R&D Costs & Time-to-Market',
+    imageId: 'ai-hub-focus-group',
   },
   {
-    icon: ShieldCheck,
-    title: 'Expert Evaluation Report',
+    icon: Globe,
+    title: 'Supply Chain Sentinel',
     description:
-      'A detailed report from a domain expert validating the prototype’s effectiveness and viability.',
+      'Monitors global news and geopolitics for risks like chip shortages or port strikes, delivering real-time warnings.',
+    outcome: 'Avoid Delays & Secure Pricing',
+    imageId: 'ai-hub-supply-chain',
   },
 ];
 
-const exampleProblems = [
-  {
-    title: 'Robotics & Automation',
-    description:
-      'Automate repetitive tasks, from sorting products with computer vision to robotic assembly.',
-    imageId: 'rd-problem-robotics',
-  },
-  {
-    title: 'Machine Learning Models',
-    description:
-      'Develop custom ML models for forecasting, anomaly detection, or natural language processing.',
-    imageId: 'rd-problem-ml',
-  },
-  {
-    title: 'Textile Automation',
-    description:
-      'Create solutions for automated defect detection, color matching, or material handling in textile manufacturing.',
-    imageId: 'rd-problem-textile',
-  },
-];
 
 export default function RDMarketplacePage() {
   return (
@@ -70,158 +55,81 @@ export default function RDMarketplacePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl font-bold font-headline tracking-tight lg:text-5xl">
-                The R&amp;D Marketplace for Hard Problems
+                The AI Hub: Your Virtual Workforce
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
-                Turn your toughest innovation challenges into tangible
-                prototypes. Access a global network of verified engineers and
-                scientists who compete to build your solution, faster and at a
-                fraction of the cost.
+                Go beyond analytics. Our autonomous agents replace manual analysis with proactive, strategic execution. This is your dedicated team of virtual analysts, working 24/7.
               </p>
               <div className="mt-8 flex gap-4">
                 <Button size="lg" variant="accent" asChild>
-                  <Link href="/onboarding/enterprise">Submit Your Challenge</Link>
+                  <Link href="/onboarding/enterprise">Request a Demo</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/how-it-works">How It Works</Link>
+                  <Link href="/pricing">View Pricing</Link>
                 </Button>
               </div>
             </div>
             <div className="bg-muted p-4 rounded-lg">
                 <Image
                     src="https://picsum.photos/seed/rd-hero/800/600"
-                    alt="R&D Marketplace Hero"
+                    alt="AI Hub Hero"
                     width={800}
                     height={600}
                     className="rounded-md"
-                    data-ai-hint="futuristic laboratory"
+                    data-ai-hint="futuristic command center"
                 />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="how-it-works" className="py-16 md:py-24 bg-muted">
+      <section id="ai-agents" className="py-16 md:py-24 bg-muted">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold font-headline">
-              A Simple, Powerful Process
-            </h2>
-             <Link href="/how-it-works">
-                <Button variant="link" className="mt-2 text-lg">
-                  See the full 6-step flow <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mb-4">
-                <FlaskConical className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold font-headline">1. Post a Problem</h3>
-              <p className="text-muted-foreground mt-2">
-                Define your challenge, and our AI helps scope it.
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mb-4">
-                <Users className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold font-headline">2. Get Solutions</h3>
-              <p className="text-muted-foreground mt-2">
-                Top solvers compete to build the best prototype.
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mb-4">
-                <Package className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold font-headline">3. Receive Prototype</h3>
-              <p className="text-muted-foreground mt-2">
-                You get the code, the IP, and a working model.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="deliverables" className="py-16 md:py-24">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold font-headline">
-              What Your Company Gets
+              Autonomous Strategic Agents
             </h2>
             <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
-              We deliver a complete package, not just an idea. Every winning
-              submission includes:
+              These are not just tools; they are proactive team members delivering quantifiable business outcomes.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {benefits.map((benefit) => (
-              <Card key={benefit.title}>
-                <CardHeader className="flex flex-row items-start gap-4">
-                  <div className="flex-shrink-0 mt-1">
-                    <benefit.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle>{benefit.title}</CardTitle>
-                    <CardDescription>{benefit.description}</CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiAgents.map((agent) => {
+                 const image = PlaceHolderImages.find(img => img.id === agent.imageId);
+                return (
+                 <Card key={agent.title} className="flex flex-col">
+                    <CardHeader>
+                         <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary text-primary-foreground mb-4">
+                            <agent.icon className="w-6 h-6" />
+                        </div>
+                        <CardTitle>{agent.title}</CardTitle>
+                        <CardDescription>{agent.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                         {image && <Image src={image.imageUrl} alt={agent.title} width={600} height={400} className="rounded-md border object-cover aspect-video" data-ai-hint={image.imageHint} />}
+                    </CardContent>
+                     <CardContent>
+                        <p className="text-sm font-semibold text-primary">Outcome: <span className="text-foreground font-medium">{agent.outcome}</span></p>
+                    </CardContent>
+                </Card>
+            )})}
           </div>
         </div>
       </section>
-
-      <section id="cost-model" className="py-16 md:py-24 bg-muted">
+      
+      <section className="py-16 md:py-24">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h2 className="text-3xl font-bold font-headline">
-                Faster &amp; More Affordable R&amp;D
-              </h2>
-              <p className="mt-4 text-muted-foreground">
-                Our crowdsourced model fundamentally changes the economics of
-                innovation. By parallelizing the effort and eliminating hiring
-                overheads, we deliver results at a fraction of the traditional
-                cost and time.
-              </p>
-              <div className="mt-8 grid grid-cols-2 gap-6">
-                <div className="bg-card p-6 rounded-lg">
-                  <Clock className="w-8 h-8 text-primary mb-2" />
-                  <p className="text-3xl font-bold">7–30 Days</p>
-                  <p className="text-muted-foreground">
-                    Typical prototype delivery timeline, depending on complexity.
-                  </p>
-                </div>
-                <div className="bg-card p-6 rounded-lg">
-                  <Zap className="w-8 h-8 text-primary mb-2" />
-                  <p className="text-3xl font-bold">~70% Cheaper</p>
-                  <p className="text-muted-foreground">
-                    Than typical in-house R&amp;D project costs.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-                <h3 className="text-xl font-bold font-headline mb-4">Example Problems We Solve</h3>
-                <div className="space-y-4">
-                    {exampleProblems.map(problem => {
-                        const image = PlaceHolderImages.find(img => img.id === problem.imageId);
-                        return (
-                            <Card key={problem.title} className="hover:shadow-md transition-shadow">
-                                <div className="flex items-center gap-4 p-4">
-                                    {image && <Image src={image.imageUrl} alt={problem.title} width={100} height={75} className="rounded-md object-cover" data-ai-hint={image.imageHint} />}
-                                    <div>
-                                        <h4 className="font-semibold">{problem.title}</h4>
-                                        <p className="text-sm text-muted-foreground">{problem.description}</p>
-                                    </div>
-                                </div>
-                            </Card>
-                        )
-                    })}
-                </div>
+          <div className="bg-primary text-primary-foreground rounded-lg p-12 text-center">
+            <h2 className="text-3xl font-bold font-headline">
+              Need Something More?
+            </h2>
+            <p className="mt-2 max-w-xl mx-auto">
+              For truly novel challenges, our Beta Labs connects you with a global community of innovators to build custom solutions from the ground up.
+            </p>
+            <div className="mt-8 flex justify-center gap-4">
+              <Button size="lg" variant="secondary" asChild>
+                <Link href="/community">Explore Beta Labs</Link>
+              </Button>
             </div>
           </div>
         </div>
