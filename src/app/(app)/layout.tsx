@@ -41,7 +41,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <Sidebar>
         <SidebarHeader>
           <div className="flex items-center gap-2">
-            <h1 className="font-headline text-lg font-semibold">InnoGrid</h1>
+            <h1 className="font-headline text-lg font-semibold">Novexa</h1>
           </div>
         </SidebarHeader>
         <SidebarContent>

@@ -31,7 +31,7 @@ const caseStudies = [
     client: 'GadgetFlow Accessories',
     title: 'Optimizing E-commerce Product Pricing',
     challenge: 'Struggling to price a new line of 50+ electronic accessories against competitors, leading to lost sales and low margins.',
-    solution: 'Utilized InnoGrid\'s BI platform to map competitor prices, analyze market demand from reviews, and simulate unit economics. The Price Optimization template suggested dynamic pricing for each SKU.',
+    solution: 'Utilized Novexa\'s BI platform to map competitor prices, analyze market demand from reviews, and simulate unit economics. The Price Optimization template suggested dynamic pricing for each SKU.',
     results: [
       '25% increase in average profit margin.',
       '18% uplift in sales for optimized products.',
@@ -53,7 +53,7 @@ export default function CaseStudiesPage() {
             Real Problems, Real Results
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            See how brands and enterprises have leveraged InnoGrid AI to gain a
+            See how brands and enterprises have leveraged Novexa to gain a
             competitive edge, from AI-driven insights to tangible R&amp;D prototypes.
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function CaseStudiesPage() {
                           <p className="text-muted-foreground mt-1">{study.challenge}</p>
                         </div>
                         <div>
-                          <h3 className="font-semibold font-headline">The InnoGrid Solution</h3>
+                          <h3 className="font-semibold font-headline">The Novexa Solution</h3>
                           <p className="text-muted-foreground mt-1">{study.solution}</p>
                         </div>
 

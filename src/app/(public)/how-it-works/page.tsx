@@ -60,7 +60,7 @@ export default function HowItWorksPage() {
             <p className="mt-4 text-lg text-muted-foreground">
               Our streamlined process is designed for speed, efficiency, and
               results. Turn complex R&D challenges into market-ready prototypes
-              with InnoGrid’s crowdsourcing engine.
+              with Novexa’s crowdsourcing engine.
             </p>
           </div>
         </div>

@@ -25,7 +25,7 @@ export interface PillNavProps {
 }
 
 const PillNav: React.FC<PillNavProps> = ({
-  logoText = 'InnoGrid',
+  logoText = 'Novexa',
   items,
   activeHref,
   className = '',

@@ -61,7 +61,7 @@ export default function CommunityPage() {
                 <TestTube2 className="w-16 h-16 text-primary" />
             </div>
             <h1 className="text-4xl font-bold font-headline tracking-tight lg:text-5xl">
-              InnoGrid Beta Labs
+              Novexa Beta Labs
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
               Our forward-looking engine for open innovation, data acquisition, and talent engagement. This is where the future is built, together.

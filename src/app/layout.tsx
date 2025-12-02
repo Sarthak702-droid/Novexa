@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import ClickSpark from '@/components/ui/ClickSpark';
 
 export const metadata: Metadata = {
-  title: 'InnoGrid',
+  title: 'Novexa',
   description:
     'AI Product Intelligence + R&D Crowdsourcing Platform. Better decisions for small brands, faster prototypes for enterprises.',
 };

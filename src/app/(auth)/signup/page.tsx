@@ -40,7 +40,7 @@ export default function SignupPage() {
             href="/"
             className="flex items-center justify-center gap-2 mb-4"
           >
-            <span className="font-headline text-2xl font-bold">InnoGrid</span>
+            <span className="font-headline text-2xl font-bold">Novexa</span>
           </Link>
           <CardTitle className="text-2xl font-headline">Sign Up</CardTitle>
           <CardDescription>

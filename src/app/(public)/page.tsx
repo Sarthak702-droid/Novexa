@@ -176,12 +176,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* InnoGrid Ecosystem Section */}
+        {/* Novexa Ecosystem Section */}
         <section className="bg-muted py-16 md:py-24">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
-                The InnoGrid Industrial Intelligence & Strategy Platform
+                The Novexa Industrial Intelligence & Strategy Platform
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 An integrated ecosystem designed to drive strategy from the

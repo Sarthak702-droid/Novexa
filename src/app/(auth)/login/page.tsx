@@ -27,7 +27,7 @@ export default function LoginPage() {
             particleCount={100}
             particleSpread={15}
             speed={0.1}
-            particleBaseSize={20}
+            particleBaseSize={25}
             moveParticlesOnHover={true}
             alphaParticles={false}
             disableRotation={false}
@@ -40,7 +40,7 @@ export default function LoginPage() {
             className="flex items-center justify-center gap-2 mb-4"
           >
             <span className="font-headline text-2xl font-bold">
-              InnoGrid
+              Novexa
             </span>
           </Link>
           <h1 className="text-3xl font-bold font-headline">Login</h1>

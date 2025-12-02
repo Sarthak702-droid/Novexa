@@ -22,7 +22,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-slate-900">
       <div className="container flex h-20 items-center">
         <PillNav
-          logoText="InnoGrid AI"
+          logoText="Novexa"
           items={navLinks}
           activeHref={pathname}
           baseColor="hsl(var(--primary))"

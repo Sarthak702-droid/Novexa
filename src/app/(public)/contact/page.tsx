@@ -21,7 +21,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Have a question, a project idea, or want to see InnoGrid AI in
+              Have a question, a project idea, or want to see Novexa in
               action? We’d love to hear from you.
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function ContactPage() {
               <div className="mt-4 space-y-4 text-muted-foreground">
                 <div className="flex items-center gap-4">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span>contact@innogrid.ai</span>
+                  <span>contact@novexa.ai</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="w-5 h-5 text-primary" />
